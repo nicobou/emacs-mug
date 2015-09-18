@@ -1,0 +1,105 @@
+% Design for reference mug for GNU Emacs
+
+% This design is Copyright (C) 2010, 2011 Aleksandrs Rudzitis
+
+% Reference material is Copyright (C) 1987, 1993, 1996, 1997, 2001, 2002, 2003,
+% 2004, 2005, 2006, 2007, 2008, 2009, 2010  Free Software Foundation, Inc.
+
+% Author: Aleks Rudzitis <ajrudzit@member.fsf.org>, derived from refcard
+% by Stephen Gildea <gildea@stop.mail-abuse.org>
+
+% You can redistribute this design and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <http://www.gnu.org/licenses/>
+
+% This file is intended to be used with the image gnu-emacs.png. This file is
+% copyrighted as follows:
+% Author: Luis Fernandes <elf@ee.ryerson.ca>
+% Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010
+%  Free Software Foundation, Inc.
+% License: GNU General Public License version 3 or later (see COPYING)
+
+% To compile this design to a pdf:
+% pdflatex refmug-vX.tex
+
+\documentclass{minimal}
+
+\usepackage[margin=0.1in,paperwidth=7.75in,paperheight=3in]{geometry}
+\usepackage{multicol}
+\usepackage{graphicx}
+
+\setlength{\parindent}{0in}
+\setlength{\columnsep}{20pt}
+\setlength{\columnseprule}{1pt}
+
+\begin{document}
+\begin{multicols}{3}
+\vspace*{\fill}
+\begin{center}
+\includegraphics[scale=1.]{gnu-emacs.png}
+\end{center}
+\vspace*{\fill}
+\columnbreak
+\fontsize{6pt}{7pt}\selectfont
+
+\fontsize{8pt}{9pt}\selectfont
+
+\def\key#1#2{#1 & \texttt{#2} \\}
+
+
+\begin{tabular}{ p{1.95in} p{.5in} }
+\key{help}{C-h}
+\key{apropos search function}{C-h a}
+\key{describe the function a key runs}{C-h k}
+\key{describe function}{C-h f}
+\key{describe variable}{C-h v}
+\key{describe binding}{C-h b}
+&\\
+\key{search forward}{C-s}
+\key{search backward}{C-r}
+\key{switch buffer}{C-x b}
+&\\
+\key{run shell command}{M-!~cmd}
+\key{with region contents as input}{M-|~cmd}
+\key{asynchronously}{M-\&~cmd}
+\key{subshell with input and output}{M-x~term}
+&\\
+\key{Kill rectangle}{C-x r k}
+\key{Yank rectangle}{C-x r y}
+\key{Insert blank space rectangle}{C-x b}
+\key{Replace blank space rectangle}{C-x r c}
+\end{tabular}
+\begin{tabular}{ p{1.8in} p{.7in} }
+\key{autocomplete word}{M-/}
+&\\
+\key{set mark here}{C-SPC}
+\key{mark \textbf{paragraph}}{M-h}
+\key{mark \textbf{function}}{C-M-h}
+\key{mark entire \textbf{buffer}}{C-x h}
+\key{pop to mark}{C-u C-SPC}
+&\\
+\key{interactive replace }{M-\%}
+\key{interactive regex replace}{C-M-\%}
+\key{\texttt{re-builder}}{}
+&\\
+\key{indent region}{C-M-\textbackslash}
+\key{comment region}{M-;}
+\key{\texttt{align-regexp}}{}
+&\\
+\key{start keyboard macro}{C-x (}
+\key{end keyboard macro}{C-x )}
+\key{call keyboard last macro}{C-x e}
+\key{name last macro}{C-x C-k n}
+\end{tabular}
+\end{multicols}
+\end{document}
+
