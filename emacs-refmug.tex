@@ -57,12 +57,9 @@
 
 
 \begin{tabular}{ p{1.95in} p{.5in} }
-\key{help}{C-h}
 \key{apropos search function}{C-h a}
 \key{describe the function a key runs}{C-h k}
 \key{describe function}{C-h f}
-\key{describe variable}{C-h v}
-\key{describe binding}{C-h b}
 &\\
 \key{search forward}{C-s}
 \key{search backward}{C-r}
@@ -79,10 +76,11 @@
 \key{Insert blank space rectangle}{C-x b}
 \key{Replace blank space rectangle}{C-x r c}
 \key{Replace rectangle with string}{C-x r t}
+&\\
+\key{save frame configuration}{C-x r f}
+\key{restore frame configuration}{C-x r j}
 \end{tabular}
 \begin{tabular}{ p{1.8in} p{.7in} }
-\key{autocomplete word}{M-/}
-&\\
 \key{set mark here}{C-SPC}
 \key{mark \textbf{paragraph}}{M-h}
 \key{mark \textbf{function}}{C-M-h}
@@ -100,7 +98,11 @@
 \key{start keyboard macro}{C-x (}
 \key{end keyboard macro}{C-x )}
 \key{call keyboard last macro}{C-x e}
-\key{name last macro}{C-x C-k n}
+&\\
+\key{copy to register}{C-x r x}
+\key{insert register}{C-x r i}
+&\\
+\key{autocomplete word}{M-/}
 \end{tabular}
 \end{multicols}
 \end{document}
